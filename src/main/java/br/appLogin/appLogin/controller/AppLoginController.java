@@ -1,21 +1,16 @@
 package br.appLogin.appLogin.controller;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 @Controller
 public class AppLoginController {
 
-
-    @Id
-    @GeneratedValue()
-    private Long id;
-
-    private String nome;
-    private String email;
-    private String senha;
-
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
 
 
 }
