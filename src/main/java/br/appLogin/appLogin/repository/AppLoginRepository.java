@@ -1,6 +1,9 @@
 package br.appLogin.appLogin.repository;
 
-public class AppLoginRepository {
+import br.appLogin.appLogin.model.Usuario;
+import org.springframework.data.repository.CrudRepository;
+
+public interface AppLoginRepository{
 
 
 }
