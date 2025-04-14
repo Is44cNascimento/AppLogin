@@ -55,11 +55,16 @@
 <body>
 <div class="login-container">
   <h2>Login</h2>
-  <input type="text" placeholder="Digite seu nome de usuário">
-  <input type="password" placeholder="Digite sua senha">
-  <button class="login-button">Entrar</button>
+  <input name="nome" type="text" placeholder="Digite seu nome de usuário">
+  <input name="senha" type="password" placeholder="Digite sua senha">
+  <button class="login-button" formmethod="post">Entrar</button>
   <a href="/cadastro" class="register-link">Registrar-se</a>
   <div class="error-box">Erro ao processar o login</div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+
 </body>
 </html>

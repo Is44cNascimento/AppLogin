@@ -1,12 +1,9 @@
 package br.appLogin.appLogin.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 
-
+@Table
 @Entity
 public class Usuario {
 
@@ -29,6 +26,10 @@ public class Usuario {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+    }
+
+    public Usuario() {
+
     }
 
     public long getId() {
