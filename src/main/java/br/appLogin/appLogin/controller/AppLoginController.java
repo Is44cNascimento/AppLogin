@@ -20,7 +20,6 @@ public class AppLoginController {
     @Autowired
     private UsuarioRepository ur;
 
-
     @Autowired
     private AppLoginRepository ar;
 
