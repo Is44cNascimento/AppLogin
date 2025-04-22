@@ -28,6 +28,18 @@ public class AppLoginController {
         return "login";
     }
 
+
+    @GetMapping("/perfilPrincipal")
+    public String perfilPrincipal(){
+        return "perfilPrincipal.html";
+
+    }
+
+    @GetMapping("/contatos")
+    public String contatos(){
+        return "contatos.html";
+    }
+
     @GetMapping("/cadastro")
     public String cadastro() {
         return "cadastro";

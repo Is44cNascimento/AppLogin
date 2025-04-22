@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MEU PORTFÓLIO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a89f9f;
+        }
+
+        header {
+            background-color: #8b3ff7;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 50px);
+
+        }
+
+        .sidebar {
+            width: 70px;
+
+            background-color: #8b3ff7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            gap: 20px;
+            border-radius: 0 0 0 10px;
+        }
+
+        .sidebar div {
+
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+        }
+
+        .pink { background-color: #FF33B8; }
+        .yellow { background-color: #FFC700; }
+        .blue { background-color: #00CFFF; }
+        .green { background-color: #3EFF00; }
+        .red { background-color: #FF0000; border: 2px solid white; }
+        .darkkk{background-color: rgb(0,0,0,10)}
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 40px;
+        }
+
+        .photo {
+            width: 350px;
+            height: 350px;
+            background-color:rgb(0,0,0,0.1);
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 15px;
+            box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .text-box {
+            width: 400px;
+            height: 500px;
+            background-color: #dcdcdc;
+            color: black;
+            display: flex;
+            padding: 50px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin: 10px;
+            padding-inline-start: 10px;
+            padding-inline-end: 5px;
+            font-weight:bolder;
+            border-radius: 15px;
+            box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.5);
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+<header>MEU PORTFÓLIO</header>
+<div class="container">
+    <div class="sidebar">
+        <div class="pink">
+            <a href="/perfilPrincipal"><img src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" style="width: 50px;height:45px;"></a>
+        </div>
+        <div class="yellow">
+            <a href="/perfilPrincipal"><img src="https://icons8.com.br/icon/fUUEbUbXhzOA/male-user" style="width: 50px;height:45px;"></a>
+
+        </div>
+        <div class="blue">
+            <a href="/perfilPrincipal"><img src="https://icons8.com.br/icon/fUUEbUbXhzOA/male-user" style="width: 50px;height:45px;"></a>
+
+        </div>
+        <div class="green">
+            <a href="/perfilPrincipal"><img src="https://img.icons8.com/?size=100&id=9489&format=png&color=000000" style="width: 40px;height:40px; padding-inline-start: 8px; padding-top: 5px"></a>
+        </div>
+        <div class="red">
+            <a href="/contatos"><img src="https://img.icons8.com/?size=100&id=2817&format=png&color=000000" style="height: 40px; height: 45px; "></a>
+        </div>
+
+    </div>
+
+
+    <div class="content">
+        <div class="photo"><img src="" alt="minha foto"></div>
+        <div class="text-box">Olá, meu nome é Isaac Nascimento, sou estudante de ADS na ucsal.
+        Atualmente estudo focado em java com o framework Spring</div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+
+    <script>
+        function email(){
+            alert("isaacgamex7@outlook.com");
+        }
+
+    </script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 0px);
+
+        }
+
+        .sidebar {
+            width: 70px;
+
+            background-color: #8b3ff7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 80px;
+            gap: 20px;
+            border-radius: 0 0 0 10px;
+        }
+
+        .sidebar div {
+
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+        }
+
+        .pink { background-color: #FF33B8; }
+        .yellow { background-color: #FFC700; }
+        .blue { background-color: #00CFFF; }
+        .green { background-color: #3EFF00; }
+        .red { background-color: #FF0000; border: 2px solid white; }
+
+
+        .content {
+            flex: 1;
+            background-color: #B5B5B5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            height: 40px;
+            background-color: #8B30EC;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .left, .right {
+            width: 50%;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .left h2, .right h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            background-color: #F7941D;
+            color: black;https://github.com
+            font-weight: bold;
+            padding: 10px;
+            margin: 10px 0;
+            width: 150px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(2, 80px);
+            gap: 90px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .skills div {
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+        }
+
+        .skills img {
+            height: 100px;
+            object-fit:initial;
+        }
+
+        .skills span {
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .left, .right {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .skills {
+                grid-template-columns: repeat(2, 80px);
+            }
+        }
+
+        .pink, .blue, .green,.red{
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <div class="pink">
+            <a href="/perfilPrincipal"><img src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" style="width: 50px;height:45px;"></a>
+        </div>
+        <div class="yellow">
+            <a href="/perfilPrincipal"><img src="https://icons8.com.br/icon/fUUEbUbXhzOA/male-user" style="width: 50px;height:45px;"></a>
+
+        </div>
+        <div class="blue">
+            <a href="/perfilPrincipal"><img src="https://icons8.com.br/icon/fUUEbUbXhzOA/male-user" style="width: 50px;height:45px;"></a>
+
+        </div>
+        <div class="green">
+            <a href="/perfilPrincipal"><img src="https://img.icons8.com/?size=100&id=9489&format=png&color=000000" style="width: 40px;height:40px; padding-inline-start: 8px; padding-top: 5px"></a>
+        </div>
+        <div class="red">
+            <a href="/contatos"><img src="https://img.icons8.com/?size=100&id=2817&format=png&color=000000" style="height: 40px; height: 45px; "></a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="header">MEU PORTFÓLIO</div>
+        <div class="main">
+            <div class="left">
+                <h2>CONTATO</h2>
+                <a class="button" href="https://www.linkedin.com/in/isaac-nascimento-de-jesus-335a782ab/" target="_blank">LINKEDIN</a>
+                <a class="button" href="https://discord.com" target="_blank">DISCORD</a>
+                <a class="button" href="https://github.com/Is44cNascimento" target="_blank">GITHUB</a>
+                <a class="button" onclick="email()">EMAIL</a>
+            </div>
+            <div class="right">
+                <h2>ESPECIALIZAÇÃO</h2>
+                <div class="skills">
+                    <div>
+                        <img src="Fotos/pngegg.png" alt="Spring">
+                    </div>
+                    <div>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java">
+                    </div>
+                    <div>
+                        <img src="Fotos/html-css-js.png" alt="HTML5-CSS-JS">
+                    </div>
+
+
+                    <div>
+                        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+
+</body>
+</html>
