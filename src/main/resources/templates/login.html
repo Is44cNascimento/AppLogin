@@ -55,14 +55,58 @@
 <body>
 <div class="login-container">
   <h2>Login</h2>
-  <input name="nome" type="text" placeholder="Digite seu nome de usuário">
-  <input name="senha" type="password" placeholder="Digite sua senha">
-  <a href="/perfilPrincipal"><button class="login-button" formmethod="post">Entrar</button></a>
-  <a href="/cadastro" class="register-link">Registrar-se</a>
-  <div class="error-box">Erro ao processar o login</div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+  <form id="login-form">
+    <input id="email" name="email" type="text" placeholder="Digite seu e-mail" required>
+    <input id="senha" name="senha" type="password" placeholder="Digite sua senha" required>
+    <button class="login-button" type="submit">Entrar</button>
+  </form>
+
+  <a href="/cadastro" class="register-link">Registrar-se</a>
+
+  <!-- Div para erro -->
+  <div id="error-box" style="display:none; color: red; margin-top: 10px;">
+    Erro ao processar o login
+  </div>
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede recarregar
+
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+      const errorBox = document.getElementById("error-box");
+
+      fetch("/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `email=${encodeURIComponent(email)}&senha=${encodeURIComponent(senha)}`
+      })
+              .then(response => {
+                if (response.status === 200) {
+                  // Login OK, redireciona
+                  window.location.href = "/perfilPrincipal";
+                } else if (response.status === 401) {
+                  // Login falhou
+                  errorBox.style.display = "block";
+                  errorBox.innerText = "Email ou senha incorretos!";
+                } else {
+                  errorBox.style.display = "block";
+                  errorBox.innerText = "Erro inesperado. Tente novamente.";
+                }
+              })
+              .catch(error => {
+                console.error("Erro na requisição:", error);
+                errorBox.style.display = "block";
+                errorBox.innerText = "Erro de conexão com o servidor.";
+              });
+    });
+  </script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" defer></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
 

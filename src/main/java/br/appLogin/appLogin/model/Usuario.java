@@ -9,28 +9,18 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    @NotEmpty
+
     private String nome;
 
-    @NotEmpty
+
     private String email;
 
-    @NotEmpty
+
     private String senha;
 
 
-    public Usuario(long id, String nome, String email, String senha) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-    }
-
-    public Usuario() {
-
-    }
 
     public long getId() {
         return id;

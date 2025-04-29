@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEU PORTFÓLIO - LOJA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a89f9f;
+        }
+
+        header {
+            background-color: #8b3ff7;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 50px);
+        }
+
+        .sidebar {
+            width: 70px;
+            background-color: #8b3ff7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            gap: 20px;
+            border-radius: 0 0 0 10px;
+        }
+
+        .sidebar div {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+        }
+
+        .pink { background-color: #FF33B8; }
+        .yellow { background-color: #ff5900; border: 2px solid white; }
+        .blue { background-color: #00CFFF; }
+        .green { background-color: #3EFF00; }
+        .red { background-color: #FF0000; }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .card {
+            background-color: #8b3ff7;
+            width: 200px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .card span {
+            margin-top: 100px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .card button {
+            margin-top: 20px;
+            background-color: #8b3ff7;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 4px 6px 12px rgba(0, 4, 0, 0.4);
+        }
+
+        .card button:hover {
+            background-color: #5B90A6;
+        }
+
+
+        #customAlert {
+            display: none;
+            position: absolute;
+            background-color: #8a2be2;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #customAlert::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 20px 0 20px;
+            border-color: #8a2be2 transparent transparent transparent;
+        }
+
+        /* Botão de fechar */
+        #closeBtn {
+            display: block;
+            margin-top: 15px;
+            background-color: white;
+            color: #8a2be2;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #closeBtn:hover {
+            background-color: #dcdcdc;
+        }
+    </style>
+</head>
+<body>
+<header>MEU PORTFÓLIO</header>
+<div class="container">
+    <div class="sidebar">
+        <div class="pink">
+            <a href="/perfilPrincipal"><img src="https://img.icons8.com/?size=100&id=20750&format=png&color=000000" style="width: 50px;height:45px; ;   "></a>
+        </div>
+        <div class="yellow">
+            <a href="/loja"><img src="https://img.icons8.com/?size=100&id=13010&format=png&color=000000" alt="loja" style="width: 50px;height:45px; border: white; border-width: 2px"></a>
+
+        </div>
+        <div class="blue">
+            <a href="/perfilPrincipal"><img src="https://img.icons8.com/?size=100&id=13193&format=png&color=000000" alt="cursos" style="width: 50px;height:45px;"></a>
+
+        </div>
+        <div class="green">
+            <a href="/perfilPrincipal"><img src="https://img.icons8.com/?size=100&id=H1TKqeNpWLQj&format=png&color=000000" alt="trabalhos" style="width: 50px;height:50px;  "></a>
+        </div>
+        <div class="red">
+            <a href="/contatos"><img src="https://img.icons8.com/?size=100&id=2817&format=png&color=000000" style="height: 40px; height: 45px; padding-inline-start: 2px; "></a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>LOJA</h1>
+        <div class="card-container">
+            <div class="card">
+                <span>Espaço para imagem</span>
+                <button onclick="showAlert(event)">DESCRIÇÃO</button>
+            </div>
+            <div class="card">
+                <span>Espaço para imagem</span>
+                <button onclick="showAlert(event)">DESCRIÇÃO</button>
+            </div>
+            <div class="card">
+                <span>Espaço para imagem</span>
+                <button onclick="showAlert(event)">DESCRIÇÃO</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Componente de alerta customizado -->
+<div id="customAlert">
+    <p>Esta é uma mensagem de alerta personalizada!</p>
+    <button id="closeBtn">Fechar</button>
+</div>
+
+<script>
+    // Função para mostrar o alerta acima do botão clicado
+    function showAlert(event) {
+        const alertBox = document.getElementById('customAlert');
+        const button = event.target;
+
+        // Obtendo a posição do botão
+        const buttonRect = button.getBoundingClientRect();
+
+        // Ajustando a posição do alerta
+        alertBox.style.left = buttonRect.left + 'px';
+        alertBox.style.top = (buttonRect.top - alertBox.offsetHeight - 10) + 'px'; // 10px acima do botão
+        alertBox.style.display = 'block';
+    }
+
+    // Fechar o alerta
+    document.getElementById('closeBtn').addEventListener('click', function() {
+        const alertBox = document.getElementById('customAlert');
+        alertBox.style.display = 'none';
+    });
+</script>
+</body>
+</html>

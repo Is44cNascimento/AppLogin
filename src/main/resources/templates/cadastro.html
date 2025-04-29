@@ -58,13 +58,26 @@
 <body>
 <div class="container">
     <h2>Cadastro</h2>
-    <form method="post">
-        <input name="nome" id="username" type="text" placeholder="Digite seu nome de usuário" required>
+    <form method="post" action="/cadastroEnviarBanco">
+        <input name="nome" id="nome" type="text" placeholder="Digite seu nome de usuário" required>
         <input name="email" id="email" type="email" placeholder="Digite seu e-mail" required>
         <input name="senha" id="senha" type="password" placeholder="Digite sua senha" required>
-        <input  placeholder="Confirme sua senha" required>
-     <a href="/cadastroEnviarBanco"><button type="submit" class="button" >Cadastrar</button></a>
+        <input name="confirmarSenha" id="confirmarSenha" type="password" placeholder="Confirme sua senha" required>
+
+        <button type="submit" class="button">Cadastrar</button>
     </form>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            var senha = document.getElementById("senha").value;
+            var confirmarSenha = document.getElementById("confirmarSenha").value;
+
+            if (senha !== confirmarSenha) {
+                alert("As senhas não coincidem.");
+                event.preventDefault(); // Impede o envio do formulário
+            }
+        });
+    </script>
+
     <a href="/">Voltar</a>
 </div>
 
